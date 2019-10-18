@@ -5,7 +5,9 @@ public class Car
 	private String serialNumber;
 	private int numberDoors;
 	private boolean isCoupe = false;
+	private String brand;
 	
+	//Constructors
 	public Car()
 	{
 	}
@@ -34,5 +36,21 @@ public class Car
 	public void CarIsCoupe(boolean isCoupe)
 	{
 		this.isCoupe = isCoupe;
+		if(this.isCoupe)
+		{
+			this.numberDoors = 2;
+		}
+	}
+	public String getBrand()
+	{
+		return this.brand;
+	}
+	public void setBrand(String brand)
+	{
+		this.brand = brand;
+	}
+	public String ToString()
+	{
+		return "Serial number:"+this.serialNumber+", Number doors: "+numberDoors+", Brand: "+brand;
 	}
 }
